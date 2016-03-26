@@ -1,6 +1,8 @@
 # ActionBarProgress
 Material style drawable for horizontal progress in ActionBar.
 
+library's minSkdVersion = 7
+
 ![ActionBarProgress](ActionBarProgress.png)
 
 ## Usage
