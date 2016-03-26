@@ -22,3 +22,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.1'
 }
+
+//noinspection GroovyAssignabilityCheck
+apply plugin: 'maven-publish'
+//noinspection GroovyAssignabilityCheck
+apply from: '../deploy.gradle'
