@@ -16,6 +16,8 @@
 
 package net.yanzm.actionbarprogress.sample;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.os.Handler;
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void load() {
         if (progressBar != null) {
+            progressBar.setVisibility(View.VISIBLE);
             progressBar.setIndeterminate(true);
             handler.postDelayed(new Runnable() {
                 @Override
@@ -73,6 +76,15 @@ public class MainActivity extends AppCompatActivity {
                         final ObjectAnimator animator = ObjectAnimator.ofInt(progressBar, "progress", 0, 100)
                                 .setDuration(1000);
                         animator.setInterpolator(new DecelerateInterpolator());
+                        animator.addListener(new AnimatorListenerAdapter() {
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                super.onAnimationEnd(animation);
+                                if (progressBar != null) {
+                                    progressBar.setVisibility(View.GONE);
+                                }
+                            }
+                        });
                         animator.start();
                     }
                 }
