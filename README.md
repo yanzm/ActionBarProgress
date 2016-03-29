@@ -38,8 +38,8 @@ library's minSkdVersion = 7
 ```
 
 ```java
-progressBar.setProgressDrawable(MaterialProgressDrawable.create(this));
-progressBar.setIndeterminateDrawable(MaterialIndeterminateProgressDrawable.create(this));
+progressBar.setProgressDrawable(MaterialProgressDrawable.create(context));
+progressBar.setIndeterminateDrawable(MaterialIndeterminateProgressDrawable.create(context));
 ```
 
 
