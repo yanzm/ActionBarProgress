@@ -61,7 +61,7 @@ dependencies {
 ## License
 
 ```
-Copyright 2016 Yuki Anzai, Inc.
+Copyright 2016 Yuki Anzai
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
