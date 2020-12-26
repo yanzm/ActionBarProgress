@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">MaterialIndeterminateDrawable</string>
+    <string name="app_name">ActionBarProgress</string>
+    <string name="reload">reload</string>
 </resources>
