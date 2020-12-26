@@ -1,9 +1,9 @@
 # ActionBarProgress
 Material style drawable for horizontal progress in ActionBar.
 
-library's minSkdVersion = 7
+library's minSkdVersion = 14
 
-![ActionBarProgress](ActionBarProgress.png)
+<img src="screenshots/ActionBarProgress.gif" width=320>
 
 ## Usage
 
@@ -11,13 +11,13 @@ library's minSkdVersion = 7
 <android.support.design.widget.AppBarLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -37,9 +37,9 @@ library's minSkdVersion = 7
 </android.support.design.widget.AppBarLayout>
 ```
 
-```java
-progressBar.setProgressDrawable(MaterialProgressDrawable.create(context));
-progressBar.setIndeterminateDrawable(MaterialIndeterminateProgressDrawable.create(context));
+```kotlin
+progressBar.setProgressDrawable(MaterialProgressDrawable.create(context))
+progressBar.setIndeterminateDrawable(MaterialIndeterminateProgressDrawable.create(context))
 ```
 
 
@@ -53,7 +53,7 @@ repositories {
 }
 
 dependencies {
-    compile 'net.yanzm:actionbarprogress:1.0.0'
+    implementation "net.yanzm:actionbarprogress:2.0.0"
 }
 ```
 
